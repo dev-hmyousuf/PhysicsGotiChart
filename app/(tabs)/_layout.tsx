@@ -1,16 +1,11 @@
 import { Tabs } from 'expo-router';
 import React, { useEffect, useState } from 'react';
-import { Platform } from 'react-native';
 import * as Font from 'expo-font';
 
 import { HapticTab } from '@/components/HapticTab';
 import { IconSymbol } from '@/components/ui/IconSymbol';
-import TabBarBackground from '@/components/ui/TabBarBackground';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
   const [fontsLoaded, setFontsLoaded] = useState(false);
 
   useEffect(() => {
@@ -28,23 +23,37 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarActiveTintColor: '#000',
+        tabBarInactiveTintColor: '#555',
         headerShown: true,
         tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
-        tabBarStyle: Platform.select({
-          ios: { position: 'absolute' },
-          default: {},
-        }),
+        tabBarStyle: {
+          backgroundColor: '#fff',
+          borderTopWidth: 0,
+          shadowColor: '#000',
+          shadowOpacity: 0.05,
+          shadowRadius: 8,
+          elevation: 5,
+          height: 60,
+        },
         tabBarLabelStyle: {
           fontFamily: 'BanglaFont',
+          fontSize: 13,
         },
+        headerStyle: {
+          backgroundColor: '#fff',
+          shadowColor: 'transparent',
+          elevation: 0,
+        },
+        headerTintColor: '#000',
         headerTitleStyle: {
           fontFamily: 'BanglaFont',
           fontSize: 20,
+          color: '#000',
         },
         headerTitleAlign: 'center',
-      }}>
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{

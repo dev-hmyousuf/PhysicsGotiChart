@@ -80,7 +80,7 @@ export default function AccelerationTimeChart() {
     <SafeAreaView style={styles.container}>
       <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : null} style={{ flex: 1 }}>
         <ScrollView contentContainerStyle={styles.scrollContainer} keyboardShouldPersistTaps="handled">
-          <Text style={styles.heading}>Acceleration vs Time</Text>
+         
 
           {!submitted && (
             <>
@@ -165,7 +165,10 @@ export default function AccelerationTimeChart() {
                 stepChart
                 areaChart
                 color="#007AFF"
-                isAnimated
+                startFillColor="rgb(46, 217, 255)"
+                startOpacity={0.8}
+                endFillColor="rgb(203, 241, 250)"
+                endOpacity={0.3}
               />
               <CustomButton title="Go Back" onPress={clearAll} />
             </>

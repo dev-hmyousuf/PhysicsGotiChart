@@ -132,6 +132,7 @@ export default function VelocityTimeChart() {
               <LineChart
                 data={chartData}
                 width={340}
+                color="#007AFF"
                 height={240}
                 spacing={40}
                 initialSpacing={0}
@@ -141,11 +142,14 @@ export default function VelocityTimeChart() {
                 hideDataPoints={false}
                 isAnimated
                 hideRules={false}
-                
+                startFillColor="rgb(46, 217, 255)"
+                startOpacity={0.8}
+                endFillColor="rgb(203, 241, 250)"
+                endOpacity={0.3}
                 areaChart
-                color="#007AFF"
+       
               />
-              <CustomButton title="Go Back" onPress={clearAll} style={{ marginTop: 20, backgroundColor: 'green' }} />
+              <CustomButton title="Go Back" onPress={clearAll} style={{ marginTop: 20,}} />
             </>
           )}
         </ScrollView>
