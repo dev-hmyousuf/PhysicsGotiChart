@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Motion Chart Master",
-    "slug": "motionchartmaster",
+    "slug": "motion-chart-master",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/logo/ios.png",
@@ -13,8 +13,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/logo/android.png",
-  
+        "foregroundImage": "./assets/images/logo/android.png"
       }
     },
     "web": {
@@ -37,6 +36,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "6cd7cf1f-1903-4b28-98cb-dad5c7408a7a"
+      }
+    },
+    "owner": "hmyousuf2010"
   }
 }
