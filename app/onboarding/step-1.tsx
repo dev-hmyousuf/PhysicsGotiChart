@@ -16,7 +16,7 @@ export default function OnboardingStepOne() {
     <OnBoardingLayout bgColor="#ffffff" nextBgColor={primary2} nextHref="/onboarding/step-2">
       <View style={[generalStyles.container, { backgroundColor: "#ffffff" }]}>
         <Image
-          source={require("@/assets/images/react-logo.png")}
+          source={require("@/assets/images/logo/onboard.png")}
           contentFit="contain"
           style={generalStyles.image}
         />

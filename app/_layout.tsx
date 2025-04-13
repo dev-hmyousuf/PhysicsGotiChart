@@ -17,6 +17,10 @@ import {
   Roboto_900Black,
 } from "@expo-google-fonts/roboto";
 import { Platform } from "react-native";
+import {
+  SafeAreaProvider,
+  SafeAreaView,
+} from "react-native-safe-area-context";
 
 // Custom Light Theme
 const LightTheme = {
@@ -38,6 +42,7 @@ export default function RootLayout() {
     Roboto_500Medium,
     Roboto_700Bold,
     Roboto_900Black,
+    BanglaFont: require("@/assets/fonts/banglaUnicode1.ttf"),
   });
 
   useEffect(() => {
@@ -62,14 +67,18 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={LightTheme}>
-      <ThemedView style={{ flex: 1 }}>
-        <Stack screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="onboarding" />
-          <Stack.Screen name="(tabs)" />
-          <Stack.Screen name="+not-found" />
-        </Stack>
-      </ThemedView>
-      <StatusBar style="dark" />
+      <SafeAreaProvider>
+        <SafeAreaView style={{ flex: 1 }} edges={["bottom"]}>
+          <ThemedView style={{ flex: 1 }}>
+            <Stack screenOptions={{ headerShown: false }}>
+              <Stack.Screen name="onboarding" />
+              <Stack.Screen name="(tabs)" />
+              <Stack.Screen name="+not-found" />
+            </Stack>
+          </ThemedView>
+          <StatusBar style="dark" />
+        </SafeAreaView>
+      </SafeAreaProvider>
     </ThemeProvider>
   );
 }

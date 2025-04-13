@@ -68,18 +68,19 @@ export default function VelocityTimeChart() {
               <View style={styles.inputRow}>
                 <TextInput
                   style={styles.input}
-                  placeholder="Velocity (m/s)"
-                  keyboardType="numeric"
-                  value={velocity}
-                  onChangeText={setVelocity}
-                />
-                <TextInput
-                  style={styles.input}
-                  placeholder="Time (s)"
+                  placeholder="সময় (s)"
                   keyboardType="numeric"
                   value={time}
                   onChangeText={setTime}
                 />
+                <TextInput
+                  style={styles.input}
+                  placeholder="বেগ (m/s)"
+                  keyboardType="numeric"
+                  value={velocity}
+                  onChangeText={setVelocity}
+                />
+               
               </View>
 
               <CustomButton title="Add Data" onPress={addDataPoint} />

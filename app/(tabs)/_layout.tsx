@@ -66,7 +66,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="explore"
         options={{
-          title: 'সময় বনাম তরণ',
+          title: 'সময় বনাম ত্বরণ',
           tabBarIcon: ({ color }) => (
             <IconSymbol size={28} name="paperplane.fill" color={color} />
           ),

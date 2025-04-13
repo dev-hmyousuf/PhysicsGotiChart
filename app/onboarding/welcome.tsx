@@ -29,7 +29,7 @@ export default function OnboardingWelcome() {
             style={[
               generalStyles.text,
               generalStyles.titleBold,
-              { textAlign: "center", color: "#000" },
+              { textAlign: "center", color: "#000", fontSize : 35 },
             ]}
           >
             অভিনন্দন! আপনি চার্ট তৈরি করতে প্রস্তুত

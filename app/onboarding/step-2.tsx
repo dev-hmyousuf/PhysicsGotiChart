@@ -17,7 +17,7 @@ export default function OnboardingStepTwo() {
     >
       <View style={generalStyles.container}>
         <View style={generalStyles.textContainer}>
-          <Text style={[generalStyles.text, generalStyles.titleBold, { fontFamily : "BanglaFont" ]}>
+          <Text style={[generalStyles.text, generalStyles.titleBold, { fontFamily : "BanglaFont" }]}>
             গতি-সময় ডেটা প্রবেশ করান
           </Text>
           <Text style={[generalStyles.text, generalStyles.description, { fontFamily : "BanglaFont" }]}>

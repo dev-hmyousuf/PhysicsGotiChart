@@ -12,7 +12,7 @@ export default function Index() {
       const isComplete = await AsyncStorage.getItem("onboarding-complete");
 
       if (isComplete === "true") {
-        router.replace("(tabs)");
+        router.replace("onboarding");
       } else {
         router.replace("/onboarding");
       }
